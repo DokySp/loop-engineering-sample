@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Loop Engineering | Professional Portfolio</title>
+  <meta name="description" content="반응형 개인 프로페셔널 웹사이트와 Games 섹션을 준비한 정적 포트폴리오">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="brand">
+      <span class="brand-mark"></span>
+      <div>
+        <p class="eyebrow">Loop Engineering</p>
+        <h1>Professional Portfolio</h1>
+      </div>
+    </div>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      Menu
+    </button>
+
+    <nav id="site-nav" class="site-nav" aria-label="Primary">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <a href="#games">Games</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section id="home" class="hero panel">
+      <p class="eyebrow">Interactive media / responsive / geometric</p>
+      <h2>Black and white layout with an accent of <span>#5442db</span>.</h2>
+      <p class="lead">
+        This first loop sets up the site shell, responsive navigation, and a dedicated Games section placeholder.
+      </p>
+    </section>
+
+    <section id="about" class="panel">
+      <h2>About</h2>
+      <p>[사람 확인 필요] 프로필 핵심 문구를 다음 루프에서 정확한 내용으로 연결합니다.</p>
+    </section>
+
+    <section id="projects" class="panel grid-panel">
+      <div>
+        <h2>Projects</h2>
+        <p>프로젝트 하이라이트와 경험 요약을 담을 영역입니다.</p>
+      </div>
+      <article class="card">
+        <p class="card-label">Profile</p>
+        <h3>Android Developer</h3>
+        <p>[사람 확인 필요] 검증된 프로필 정보만 다음 단계에서 채웁니다.</p>
+      </article>
+      <article class="card">
+        <p class="card-label">Focus</p>
+        <h3>Geometric System</h3>
+        <p>정적 HTML, CSS, JavaScript만으로 구조와 상호작용을 만든다.</p>
+      </article>
+    </section>
+
+    <section id="contact" class="panel">
+      <h2>Contact</h2>
+      <p>연락처와 외부 링크는 이후 루프에서 정확한 값으로 연결합니다.</p>
+    </section>
+
+    <section id="games" class="panel games-panel">
+      <div>
+        <h2>Games</h2>
+        <p>지렁이 게임 영역을 준비해 두었습니다. 실제 게임 로직은 다음 루프에서 연결합니다.</p>
+      </div>
+      <div class="game-placeholder" aria-label="Snake game placeholder">
+        <span></span>
+        <p>Snake game coming next.</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
