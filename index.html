@@ -9,6 +9,10 @@
   <script src="./script.js" defer></script>
 </head>
 <body>
+  <div class="noise-layer" aria-hidden="true"></div>
+  <div class="cursor-orb" aria-hidden="true"></div>
+  <div class="grid-wash" aria-hidden="true"></div>
+
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
@@ -36,10 +40,19 @@
   <main id="main">
     <section id="home" class="hero panel">
       <p class="eyebrow">Interactive media / responsive / geometric</p>
-      <h2>Black and white layout with an accent of <span>#5442db</span>.</h2>
+      <h2>Black field, monochrome structure, and an accent of <span>#5442db</span>.</h2>
       <p class="lead">
-        This first loop sets up the site shell, responsive navigation, and a dedicated Games section placeholder.
+        This shell is designed like a modern art installation: quiet typography, kinetic light, and a dedicated Games section placeholder.
       </p>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="pulse pulse-a"></div>
+        <div class="pulse pulse-b"></div>
+        <div class="pulse pulse-c"></div>
+        <div class="signal-card">
+          <span>MONOCHROME</span>
+          <strong>Motion / Depth / Contrast</strong>
+        </div>
+      </div>
     </section>
 
     <section id="about" class="panel">
@@ -52,12 +65,12 @@
         <h2>Projects</h2>
         <p>프로젝트 하이라이트와 경험 요약을 담을 영역입니다.</p>
       </div>
-      <article class="card">
+      <article class="card interactive-tile">
         <p class="card-label">Profile</p>
         <h3>Android Developer</h3>
         <p>[사람 확인 필요] 검증된 프로필 정보만 다음 단계에서 채웁니다.</p>
       </article>
-      <article class="card">
+      <article class="card interactive-tile">
         <p class="card-label">Focus</p>
         <h3>Geometric System</h3>
         <p>정적 HTML, CSS, JavaScript만으로 구조와 상호작용을 만든다.</p>
