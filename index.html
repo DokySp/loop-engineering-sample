@@ -4,8 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Loop Engineering | Professional Portfolio</title>
-  <meta name="description" content="A dark monochrome portfolio with an accent color, interactive lighting, and a Games section placeholder.">
+  <meta name="description" content="A dark monochrome portfolio with an accent color, interactive lighting, and a Games section.">
   <link rel="stylesheet" href="./styles.css">
+  <script src="./game.js" defer></script>
   <script src="./script.js" defer></script>
 </head>
 <body>
@@ -42,7 +43,7 @@
       <p class="eyebrow">Interactive media / responsive / geometric</p>
       <h2>Black<br>Monochrome<br><span>#5442db</span></h2>
       <p class="lead">
-        This page is designed like a dark exhibition space: quiet typography, kinetic light, and a dedicated Games section placeholder.
+        This page is designed like a dark exhibition space: quiet typography, kinetic light, and a dedicated Games section.
       </p>
       <div class="hero-visual" aria-hidden="true">
         <div class="pulse pulse-a"></div>
@@ -57,39 +58,67 @@
 
     <section id="about" class="panel">
       <h2>About</h2>
-      <p>[사람 확인 필요] 다음 루프에서 프로필 핵심 문구를 정확한 내용으로 연결합니다.</p>
+      <p>Software Engineer. [사람 확인 필요]</p>
     </section>
 
     <section id="projects" class="panel grid-panel">
       <div>
         <h2>Projects</h2>
-        <p>프로젝트 하이라이트와 경험 요약을 담을 영역입니다.</p>
+        <p>최근 프로젝트와 경험은 확인 가능한 정보만 바탕으로 정리합니다.</p>
       </div>
       <article class="card interactive-tile">
         <p class="card-label">Profile</p>
-        <h3>Android Developer</h3>
-        <p>[사람 확인 필요] 검증된 프로필 정보만 다음 단계에서 채웁니다.</p>
+        <h3>Software Engineer</h3>
+        <p>프리랜서 개발, 대학생 인턴, 방과후학교 강사, 콘텐츠개발팀장 경력이 확인됩니다.</p>
       </article>
       <article class="card interactive-tile">
-        <p class="card-label">Focus</p>
-        <h3>Geometric System</h3>
-        <p>정적 HTML, CSS, JavaScript만으로 구조와 상호작용을 만듭니다.</p>
+        <p class="card-label">Experience</p>
+        <h3>Product / App Work</h3>
+        <p>공개 프로필 기준으로 확인되는 역할만 간단히 정리합니다. [사람 확인 필요]</p>
+      </article>
+      <article class="card interactive-tile">
+        <p class="card-label">Research</p>
+        <h3>Geometric UI Systems</h3>
+        <p>정적 HTML, CSS, JavaScript만으로 구조와 상호작용을 설계합니다.</p>
       </article>
     </section>
 
     <section id="contact" class="panel">
       <h2>Contact</h2>
-      <p>연락처와 외부 링크는 이후 루프에서 정확한 값으로 연결합니다.</p>
+      <p>연락처와 외부 링크는 이후 검증된 값으로 교체합니다. [사람 확인 필요]</p>
     </section>
 
     <section id="games" class="panel games-panel">
-      <div>
+      <div class="games-copy">
         <h2>Games</h2>
-        <p>지렁이 게임 영역을 준비해 두었습니다. 실제 게임 로직은 다음 루프에서 연결합니다.</p>
+        <p>지렁이 게임은 시작, 이동, 음식, 성장, 점수, 충돌, 게임 오버, 일시정지, 재시작, 최고 점수, 로컬 멀티플레이를 지원합니다.</p>
+        <div class="game-metrics" aria-label="Snake game status">
+          <div><span>P1 Score</span><strong data-score-p1>0</strong></div>
+          <div><span>P2 Score</span><strong data-score-p2>0</strong></div>
+          <div><span>Best</span><strong data-best>0</strong></div>
+          <div><span>Status</span><strong data-status>Ready</strong></div>
+        </div>
+        <div class="game-actions" aria-label="Snake controls">
+          <button type="button" data-action="start">Start</button>
+          <button type="button" data-action="pause">Pause</button>
+          <button type="button" data-action="restart">Restart</button>
+        </div>
+        <p class="games-note">P1: arrows/WASD. P2: IJKL.</p>
       </div>
-      <div class="game-placeholder" aria-label="Snake game placeholder">
-        <span></span>
-        <p>Snake game coming next.</p>
+      <div class="game-stage">
+        <canvas id="snake-board" width="600" height="600" aria-label="Snake game board"></canvas>
+        <div class="mobile-controls" aria-label="Mobile snake controls">
+          <div class="mobile-player-toggle" role="tablist" aria-label="Mobile player selection">
+            <button type="button" data-player="1" aria-pressed="true">P1</button>
+            <button type="button" data-player="2" aria-pressed="false">P2</button>
+          </div>
+          <button type="button" data-dir="up">UP</button>
+          <div class="mobile-row">
+            <button type="button" data-dir="left">LEFT</button>
+            <button type="button" data-dir="down">DOWN</button>
+            <button type="button" data-dir="right">RIGHT</button>
+          </div>
+        </div>
       </div>
     </section>
   </main>
