@@ -1,12 +1,12 @@
 :root {
   color-scheme: dark;
-  --bg: #050505;
-  --bg-soft: #0d0d0d;
-  --surface: rgba(15, 15, 15, 0.78);
-  --surface-strong: rgba(20, 20, 20, 0.92);
-  --text: #f4f4f4;
-  --muted: #a8a8a8;
-  --line: rgba(255, 255, 255, 0.12);
+  --bg: #020202;
+  --bg-soft: #0a0a0a;
+  --surface: rgba(9, 9, 9, 0.68);
+  --surface-strong: rgba(12, 12, 12, 0.9);
+  --text: #f7f7f7;
+  --muted: #b0b0b0;
+  --line: rgba(255, 255, 255, 0.08);
   --accent: #5442db;
   --accent-2: #8b7cf3;
   --shadow: 0 28px 80px rgba(0, 0, 0, 0.45);
@@ -29,10 +29,10 @@ body {
   min-height: 100vh;
   color: var(--text);
   background:
-    radial-gradient(circle at var(--glow-x) var(--glow-y), rgba(84, 66, 219, 0.22), transparent 16%),
-    radial-gradient(circle at top left, rgba(255, 255, 255, 0.05), transparent 18%),
-    linear-gradient(180deg, #080808 0%, var(--bg) 58%, #090909 100%);
-  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    radial-gradient(circle at var(--glow-x) var(--glow-y), rgba(84, 66, 219, 0.18), transparent 18%),
+    radial-gradient(circle at 50% 10%, rgba(255, 255, 255, 0.04), transparent 22%),
+    linear-gradient(180deg, #060606 0%, var(--bg) 56%, #040404 100%);
+  font-family: "Pretendard", "Noto Sans KR", "Apple SD Gothic Neo", "Segoe UI", sans-serif;
   overflow-x: hidden;
 }
 
@@ -71,7 +71,7 @@ body::before {
 }
 
 .noise-layer {
-  opacity: 0.22;
+  opacity: 0.16;
   mix-blend-mode: screen;
   background-image:
     radial-gradient(circle at 12% 20%, rgba(255, 255, 255, 0.12) 0 1px, transparent 1px),
@@ -83,13 +83,13 @@ body::before {
 }
 
 .grid-wash {
-  opacity: 0.22;
+  opacity: 0.14;
   background:
-    radial-gradient(circle at 50% 50%, rgba(84, 66, 219, 0.2), transparent 30%),
-    linear-gradient(transparent 96%, rgba(255, 255, 255, 0.04) 100%) 0 0 / 100% 36px,
-    linear-gradient(90deg, transparent 96%, rgba(255, 255, 255, 0.04) 100%) 0 0 / 36px 100%;
-  filter: blur(0.2px);
-  transform: perspective(1200px) rotateX(72deg) translateY(8vh);
+    radial-gradient(circle at 50% 50%, rgba(84, 66, 219, 0.15), transparent 30%),
+    linear-gradient(transparent 97%, rgba(255, 255, 255, 0.03) 100%) 0 0 / 100% 44px,
+    linear-gradient(90deg, transparent 97%, rgba(255, 255, 255, 0.03) 100%) 0 0 / 44px 100%;
+  filter: blur(0.15px);
+  transform: perspective(1200px) rotateX(76deg) translateY(10vh);
   transform-origin: center top;
   mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.85), transparent 90%);
 }
@@ -125,7 +125,7 @@ a {
   gap: 16px;
   padding: 18px clamp(16px, 4vw, 40px);
   backdrop-filter: blur(18px);
-  background: rgba(5, 5, 5, 0.78);
+  background: rgba(2, 2, 2, 0.82);
   border-bottom: 1px solid var(--line);
 }
 
@@ -174,7 +174,7 @@ h1 {
   padding: 10px 14px;
   font: inherit;
   cursor: pointer;
-  box-shadow: var(--shadow);
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.04), var(--shadow);
 }
 
 .site-nav {
@@ -199,24 +199,24 @@ h1 {
 
 main {
   display: grid;
-  gap: 20px;
-  padding: 24px clamp(16px, 4vw, 40px) 48px;
+  gap: 18px;
+  padding: 20px clamp(14px, 4vw, 40px) 56px;
 }
 
 .panel {
   border: 1px solid var(--line);
   border-radius: 28px;
-  background: var(--surface);
-  box-shadow: var(--shadow);
-  padding: clamp(22px, 4vw, 40px);
-  backdrop-filter: blur(16px);
+  background: linear-gradient(180deg, rgba(14, 14, 14, 0.84), rgba(6, 6, 6, 0.72));
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.44);
+  padding: clamp(20px, 4vw, 44px);
+  backdrop-filter: blur(18px);
 }
 
 .hero {
-  min-height: clamp(320px, 60vh, 620px);
+  min-height: min(84vh, 840px);
   display: grid;
-  align-content: end;
-  gap: 14px;
+  align-content: center;
+  gap: 18px;
   overflow: hidden;
   position: relative;
 }
@@ -228,16 +228,22 @@ main {
   width: min(44vw, 420px);
   aspect-ratio: 1;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(84, 66, 219, 0.34) 0%, rgba(84, 66, 219, 0) 68%);
+  background: radial-gradient(circle, rgba(84, 66, 219, 0.28) 0%, rgba(84, 66, 219, 0) 68%);
   pointer-events: none;
   filter: blur(4px);
 }
 
+.hero .eyebrow {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.72);
+}
+
 .hero h2 {
-  max-width: 12ch;
-  font-size: clamp(2.4rem, 7vw, 5.2rem);
-  line-height: 0.95;
-  letter-spacing: -0.05em;
+  max-width: 10ch;
+  font-size: clamp(3.4rem, 10vw, 7.6rem);
+  line-height: 0.88;
+  letter-spacing: -0.08em;
+  text-transform: uppercase;
 }
 
 .hero h2 span {
@@ -245,7 +251,7 @@ main {
 }
 
 .lead {
-  max-width: 60ch;
+  max-width: 42ch;
   margin-bottom: 0;
   color: var(--muted);
   font-size: 1.05rem;
@@ -254,8 +260,8 @@ main {
 
 .hero-visual {
   position: absolute;
-  inset: 18% 5% 10% auto;
-  width: min(42vw, 460px);
+  inset: 12% 3% 8% auto;
+  width: min(42vw, 520px);
   min-width: 240px;
   aspect-ratio: 1;
   display: grid;
@@ -294,10 +300,10 @@ main {
 .signal-card {
   position: relative;
   z-index: 2;
-  width: min(86%, 260px);
+  width: min(86%, 280px);
   padding: 18px;
   border-radius: 22px;
-  background: rgba(8, 8, 8, 0.76);
+  background: rgba(8, 8, 8, 0.82);
   border: 1px solid rgba(255, 255, 255, 0.14);
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
   transform: translate3d(var(--card-x, 0px), var(--card-y, 0px), 0);
@@ -321,7 +327,7 @@ main {
 
 .grid-panel {
   display: grid;
-  gap: 18px;
+  gap: 16px;
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
@@ -329,11 +335,20 @@ main {
   grid-column: 1 / -1;
 }
 
+.grid-panel > :first-child h2,
+.games-panel h2,
+.panel > h2 {
+  font-size: clamp(1.5rem, 3vw, 2.4rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  margin-bottom: 10px;
+}
+
 .card {
   padding: 22px;
-  border-radius: 22px;
-  background: linear-gradient(180deg, rgba(26, 26, 26, 0.96), rgba(12, 12, 12, 0.92));
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  background: linear-gradient(180deg, rgba(18, 18, 18, 0.96), rgba(8, 8, 8, 0.94));
+  border: 1px solid rgba(255, 255, 255, 0.07);
   transform: translate3d(0, 0, 0);
   transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
@@ -379,7 +394,7 @@ main {
   justify-items: center;
   padding: 28px;
   border-radius: 24px;
-  background: linear-gradient(160deg, rgba(255, 255, 255, 0.03), rgba(84, 66, 219, 0.12));
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.025), rgba(84, 66, 219, 0.1));
   border: 1px dashed rgba(255, 255, 255, 0.16);
 }
 
@@ -434,7 +449,7 @@ main {
   }
 
   .hero {
-    min-height: 420px;
+    min-height: 70vh;
   }
 
   .hero-visual {
@@ -459,7 +474,7 @@ main {
 
   .hero h2 {
     max-width: 10ch;
-    font-size: 2.6rem;
+    font-size: 3rem;
   }
 }
 
